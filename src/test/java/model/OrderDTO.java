@@ -1,21 +1,23 @@
 
 package model;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderDTO {
 
 
     private Boolean complete;
 
-    private Long id;
+    private int id;
 
-    private Long petId;
+    private int petId;
 
-    private Long quantity;
+    private int quantity;
 
     private String shipDate;
 
