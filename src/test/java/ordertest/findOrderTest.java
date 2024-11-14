@@ -1,6 +1,6 @@
-package orderTest;
+package ordertest;
 
-import apiPet.getOrder;
+import apipet.getOrder;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.ValidatableResponse;
 import model.ResponseOrderDTO;
@@ -8,8 +8,6 @@ import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import model.OrderDTO;
-import  apiPet.getOrder;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
@@ -23,6 +21,7 @@ public class findOrderTest {
     Проверка значений полей в боди ответа
     Проверка что запрос отработал менее чем за 2сек
      */
+
     @Test
     @DisplayName("Получение заказа по orderId")
     public void getOrder(){
@@ -61,5 +60,6 @@ public class findOrderTest {
                 .body("message", equalTo("Order not found"))
                 .time(lessThan(2000l));  //Проверка что запрос отработает менее чем за 2секунды
     }
+
 
 }

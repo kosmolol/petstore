@@ -1,4 +1,4 @@
-package apiPet;
+package apipet;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
